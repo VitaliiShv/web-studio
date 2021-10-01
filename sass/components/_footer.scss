@@ -1,0 +1,94 @@
+.footer {
+  padding: 60px 0;
+  background-color: $bg-color-primary;
+  &__content {
+    display: flex;
+  }
+  &__logo {
+    margin-bottom: 20px;
+  }
+  &__title {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.footer-address {
+  margin-right: 70px;
+  &__item {
+    display: inline-block;
+    font-style: normal;
+    color: $white;
+    margin-bottom: 9px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.contact {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.contact__link {
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contact__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-join {
+  margin-right: 93px;
+}
+
+.subscribe-form {
+  display: flex;
+  &__input {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 16px;
+    outline: none;
+    border-radius: 4px;
+    color: $white;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    padding-left: 29px;
+    padding-right: 28px;
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    fill: $white;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.subscribe-form__input:focus {
+  border: 1px solid $accent-color;
+}
+
+.subscribe-form__button:hover .subscribe-form__icon {
+  fill: $accent-color;
+}

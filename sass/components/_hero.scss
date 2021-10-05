@@ -1,22 +1,42 @@
-// .hero-bground {
-//   // width: auto;
-//   // height: 600px;
-//   // margin-left: auto;
-//   // margin-right: auto;
-//   // background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-//   //   url('../img/heroimage.jpg');
-//   // background-position: cover;
-//   background-color: $bg-color-primary;
-// }
-
 .hero {
   height: 400px;
   padding-top: 118px;
   padding-bottom: 118px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../img/hero-mob.jpg');
-  background-position: cover;
+
   background-color: $bg-color-primary;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../img/hero_bg_mob_1x.jpg');
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    & {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../img/hero_bg_mob_2x.jpg');
+    }
+  }
+
+  @media screen and(min-width:768px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../img/hero_bg_tab_1x.jpg');
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    & {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../img/hero_bg_tab_2x.jpg');
+    }
+  }
+
+  @media screen and(min-width:1200px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../img/hero_bg_desc_1x.jpg');
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    & {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../img/hero_bg_desc_2x.jpg');
+    }
+  }
+
   @media screen and(min-width:1200px) {
     height: 600px;
     padding-top: 200px;
@@ -46,23 +66,4 @@
     margin-right: auto;
     margin-left: auto;
   }
-
-  // padding-top: 200px;
-  // padding-bottom: 200px;
-  // text-align: center;
-  // &__title {
-  //   color: $white;
-
-  //   font-weight: 900;
-  //   font-size: 44px;
-  //   line-height: 1.36;
-  //   text-align: center;
-  //   letter-spacing: 0.06em;
-  //   text-transform: uppercase;
-
-  //   width: 696px;
-  //   margin-bottom: 30px;
-  //   margin-right: auto;
-  //   margin-left: auto;
 }
-// }

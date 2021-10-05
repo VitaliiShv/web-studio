@@ -5,8 +5,9 @@
   font-weight: 700;
   font-size: 24px;
   line-height: calc(28px / 24px);
-  // font-size: 26px;
-  // line-height: 1.19;
+  @media screen and(min-width:1200px) {
+    font-size: 26px;
+  }
 }
 .logo__item--black {
   color: #000;

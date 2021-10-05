@@ -174,7 +174,7 @@ img {
 
 .menu-container.is-open {
   display: block;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .menu-container.is-open menu-button {
@@ -274,7 +274,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .address {
-    margin-left: 305px;
+    margin-left: 304px;
   }
 }
 
@@ -335,14 +335,14 @@ img {
     display: flex;
     margin-right: 0;
     font-size: 12px;
-    line-height: calc(14 / 12);
     color: #757575;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .address__link {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: calc(16 / 14);
   }
 }
 
@@ -547,7 +547,8 @@ img {
 
 @media screen and (min-width: 1200px) {
   .modal {
-    max-width: 581px;
+    max-width: 528px;
+    max-height: 581px;
   }
 }
 

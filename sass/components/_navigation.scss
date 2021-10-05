@@ -54,7 +54,7 @@
 
   &.is-open {
     display: block;
-    z-index: 1000;
+    z-index: 10;
     & menu-button {
       position: absolute;
     }
@@ -135,7 +135,7 @@
   }
 
   @media screen and(min-width:1200px) {
-    margin-left: 305px;
+    margin-left: 304px;
   }
 
   @media screen and(min-width:1200px) {
@@ -180,12 +180,13 @@
       display: flex;
       margin-right: 0;
       font-size: 12px;
-      line-height: calc(14 / 12);
+
       color: $primary-text-color;
     }
 
     @media screen and(min-width:1200px) {
-      font-size: 13px;
+      font-size: 14px;
+      line-height: calc(16 / 14);
     }
   }
   &__icon {

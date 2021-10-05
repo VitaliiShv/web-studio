@@ -54,6 +54,7 @@
 
   &.is-open {
     display: block;
+    z-index: 1000;
     & menu-button {
       position: absolute;
     }
@@ -66,7 +67,7 @@
   letter-spacing: 0.02em;
   margin-bottom: -32px;
 
-  @media screen and (min-width: 678px) {
+  @media screen and (min-width: 768px) {
     display: flex;
   }
 
@@ -74,7 +75,7 @@
     margin-bottom: 32px;
     position: relative;
 
-    @media screen and (min-width: 678px) {
+    @media screen and (min-width: 768px) {
       &:not(:last-child) {
         margin-right: 50px;
       }
@@ -102,7 +103,7 @@
     }
     &--current {
       color: $accent-color;
-      @media screen and (min-width: 678px) {
+      @media screen and (min-width: 768px) {
         &::after {
           content: '';
           display: block;

@@ -41,6 +41,12 @@ img {
   margin-right: auto;
 }
 
+@media screen and (max-width: 480px) {
+  .container {
+    width: 320px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -151,6 +157,7 @@ img {
     padding-right: 15px;
     padding-top: 10px;
     padding-bottom: 48px;
+    overflow-y: scroll;
   }
 }
 
@@ -507,7 +514,6 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 93px 15px;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -525,9 +531,11 @@ img {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   padding: 40px;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
   width: 100%;
   max-width: 450px;
   max-height: 609px;
@@ -535,20 +543,17 @@ img {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: #fff;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 1200px) {
   .modal {
+    top: 50%;
     max-width: 528px;
     max-height: 581px;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-    -webkit-transform: translate(-50%, -50%) scale(1.1);
-            transform: translate(-50%, -50%) scale(1.1);
-    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -605,6 +610,7 @@ img {
 }
 
 .form__field {
+  display: block;
   position: relative;
 }
 
@@ -1004,36 +1010,19 @@ img {
 }
 
 .client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: -30px;
-}
-
-@media screen and (min-width: 480px) {
-  .client {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-left: -30px;
-    margin-bottom: -30px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .client {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-left: -30px;
-    margin-bottom: -30px;
-  }
+  margin-left: -30px;
 }
 
 .client__item {
   display: block;
   margin-bottom: 30px;
+  margin-left: 30px;
 }
 
 @media screen and (min-width: 480px) {
@@ -1068,6 +1057,12 @@ img {
   border-radius: 4px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 479px) {
+  .client__link {
+    padding: 3px 11px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1434,9 +1429,9 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  padding: 77px 24px;
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+  padding: 17px 24px;
   background: rgba(33, 150, 243, 0.9);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1444,11 +1439,23 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 480px) {
+  .overlay {
+    padding: 77px 24px;
+  }
+}
+
 .overlay__description {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.56;
   color: #ffffff;
+}
+
+@media screen and (min-width: 480px) {
+  .overlay__description {
+    font-size: 18px;
+  }
 }
 
 .works-list__link:hover .overlay,
